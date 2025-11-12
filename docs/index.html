@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora con Pasos</title>
+  <style>
+    body {
+      background-image: url('OIP.jpg');
+      background-size: 16%;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contenedor {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label, select, input, button {
+      font-size: 16px;
+      margin-top: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    input, select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      width: 48%;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #resultado, #detalle {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e0e0e0;
+      margin: 4px 0;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .botones {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h3 {
+      margin-top: 25px;
+      text-align: center;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Calculadora con Pasos (Triple / Cuádruplo)</h2>
+
+    <label>Expresión:</label>
+    <input type="text" id="operacion" placeholder="Ejemplo: 5 + 3 * 2">
+
+    <label>Modo:</label>
+    <select id="modo">
+      <option value="triple">Triple</option>
+      <option value="cuadruplo">Cuádruplo</option>
+      <option value="ambos">Ambos</option>
+    </select>
+
+    <div class="botones">
+      <button id="generar">Generar</button>
+      <button id="limpiar" style="background:#dc3545;">Limpiar</button>
+    </div>
+
+    <div id="detalle"></div>
+    <div id="resultado"></div>
+
+    <h3>Historial</h3>
+    <ul id="historial"></ul>
+  </div>
+
+  <script src="./bundle.js"></script>  
+</body>
+</html>
